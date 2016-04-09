@@ -6,8 +6,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password_digest
       t.string :age
       t.string :sex
-      t.string :skill
-      t.string :current_job
       
       
 
