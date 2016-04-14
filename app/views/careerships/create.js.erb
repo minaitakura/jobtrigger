@@ -1,0 +1,7 @@
+<% if params[:type] == "Hope" %>
+  $(".hope-<%= @job.id %>,.hope-<%= @job.name %>").replaceWith("<%= escape_javascript(render('jobs/unhope' , job: @job)) %>");
+<% else %>
+  $(".graduate-<%= @job.id %>,.graduate-<%= @job.name %>").replaceWith("<%= escape_javascript(render('jobs/ungraduate' , job: @job)) %>");
+<% end %>
+
+$('.btn-hope,.btn-graduate').removeAttr('disabled');

@@ -11,7 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160409023214) do
+ActiveRecord::Schema.define(version: 20160409064716) do
+
+  create_table "careerships", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "job_id"
+    t.string   "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "careerships", ["job_id"], name: "index_careerships_on_job_id"
+  add_index "careerships", ["user_id", "job_id", "type"], name: "index_careerships_on_user_id_and_job_id_and_type", unique: true
+  add_index "careerships", ["user_id"], name: "index_careerships_on_user_id"
+
+  create_table "jobs", force: :cascade do |t|
+    t.text     "name"
+    t.text     "company"
+    t.text     "product"
+    t.text     "role"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

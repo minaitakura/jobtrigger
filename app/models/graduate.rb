@@ -1,0 +1,2 @@
+class Graduate < Careership
+end

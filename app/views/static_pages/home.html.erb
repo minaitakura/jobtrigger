@@ -1,2 +1,136 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% #********** HEADER ********** %>
+<div id="h">
+    <div class="container">
+        <div class="row">
+            <li>
+                <%= link_to "JOB TRIGGERに登録", signup_path, class: "btn btn-lg btn-info btn-register" %>
+            </li>
+                <div class="col-md-10 col-md-offset-1 mt">
+            <h3>キーワードを入れるだけ、キャリアのヒントをくれる</h3>
+            <h1 class="mb">JOB TRIGGER</h1>
+            </div>
+            <div class="col-md-12 mt hidden-xs">
+                <%= image_tag("graph.png", alt: "", class: "img-responsive aligncenter") %>
+            </div>
+        </div>
+    </div><! --/container -->
+</div><! --/h -->
+
+<! -- ********** FIRST ********** -->
+<div id="w">
+    <div class="row nopadding">
+        <div class="col-md-5 col-md-offset-1 mt">
+            <h4>キーワードを入れるだけ、まとめて仕事を検索</h4>
+            <p>行きたい会社はあるのに、求人を募集していない？そんなお悩みはありませんか？</p>
+            <p>会社名を入れると、国内の転職サイトから求人をまとめて持ってきてくれます。</p>
+            <p class="mt">
+                <%= link_to "JOB TRIGGERに登録", signup_path, class: "btn btn-info btn-theme" %>
+            </p>
+        </div>
+
+        <div class="col-md-6 pull-right">
+            <%= image_tag("shot01.png", alt: "", class: "img-responsive alignright") %>
+        </div>
+    </div><! --/row -->
+</div><! --/container -->
+
+
+<! -- ********** BLUE SECTION - PICTON ********** -->
+<div id="picton">
+    <div class="row nopadding">
+        <div class="col-md-6 pull-left">
+            <%= image_tag("shot02.png", alt:"", class: "img-responsive alignleft") %>
+        </div>
+        <div class="col-md-5 mt">
+            <h4>必要な求人だけをメールでお知らせ</h4>
+            <p>自分の行きたい会社を探すのに、いくつもの転職サイトに登録するのは大変！</p>
+            <p>会社名やスキルのキーワードを入力して待っていれば、登録のメールアドレスに新着の求人が届きます。</p>
+            <p>自分の興味がある求人だけをお知らせしてくれるので、ノイズの求人も気になりません。</p>
+        <p class="mt">
+            <%= link_to "登録してキーワードを入力する", signup_path, class: "btn btn-white btn-theme" %>
+        </p>
+        </div>
+
+    </div><! --row -->
+</div><! --/Picton -->
+
+
+<! -- ********** BLUE SECTION - CURIOUS ********** -->
+<div id="curious">
+    <div class="row nopadding">
+        <div class="col-md-5 col-md-offset-1 mt">
+            <h4>仕事・キャリアに関する記事が書けます</h4>
+            <p>仕事・キャリアに関するTips、ノウハウ、メモを簡単に記録 & 公開することができます</p>
+            <p>仕事の転機について考える機会は人生に数回しかありません。でも、自分があの日考えていた事を記録する事で自分が勇気付けられたり、他の人も勇気付けられるかもしれません。</p>
+            <p>例えば、将来の自分のためにした資格の勉強、活躍する人を見て思ったこと、そんな些細な事をメモすることで明日の自分が見えてくるでしょう。</p>
+            <p class="mt">
+                <%= link_to "登録して記事を見てみる", signup_path, class: "btn btn-white btn-theme" %>
+            </p>
+        </div>
+
+        <div class="col-md-6 pull-right">
+            <%= image_tag("shot03.png", alt:"", class: "img-responsive alignright") %>
+        </div>
+    </div><! --/row -->
+</div><! --/curious -->
+
+<! -- ********** BLUE SECTION - MALIBU ********** -->
+<div id="malibu">
+    <div class="row nopadding">
+        <div class="col-md-6 pull-left">
+            <%= image_tag("shot04.png", alt:"", class: "img-responsive alignleft") %>
+        </div>
+        <div class="col-md-5 mt">
+            <h4>他の人のスキルやキャリアが知れる</h4>
+            <p>個人のキャリアを知る事ができるのは、有名人やメディアに取り上げられる輝いている人ばかり。</p>
+            <p>でも、私達はもっと身近な人のキャリアの歩み方や考え方を知りたい。</p>
+            <p>例えば同じ職業、もしくは同じスキルを持っている人々。隣のあの人は過去にどんな仕事をして今どんな仕事をしているのだろうか。</p>
+            <p class="mt">
+                <%= link_to "登録して他の人のキャリアを見てみる", signup_path, class: "btn btn-white btn-theme" %>
+            </p>
+        </div>
+
+    </div><! --row -->
+</div><! --/Malibu -->
+
+
+<! -- ********** BLUE SECTION - JELLY ********** -->
+<div id="jelly">
+    <div class="row nopadding">
+        <div class="col-md-5 col-md-offset-1 mt">
+            <h4>もちろん無料</h4>
+            <p>全ての機能を無料で提供します</p>
+            <p class="mt">
+                <%= link_to "無料で登録", signup_path, class: "btn btn-white btn-theme" %>
+            </p>
+        </div>
+        <div class="col-md-6 mt centered">
+            <h1 data-effect="slide-bottom">Free</h1>
+            <h3>¥0</h3>
+        </div>
+    </div><! --/row -->
+</div><! --/Jelly -->
+
+<! -- ********** FOOTER ********** -->
+<div id="f">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 centered">
+                <h4 class="mb">まずは登録して、JOBTRIGGERを体験</h4>
+                <%= link_to "無料で登録", signup_path, class: "btn btn-lg btn-info btn-sub subscribe-submit" %>
+                
+            </div>
+        </div><! --/row -->
+    </div><! --/container -->
+</div><! --/F -->
+
+<! -- ********** CREDITS ********** -->
+<div id="c">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3 centered">
+                <p>Copyright 2016 | JOBTRIGGER</p>
+            </div>
+        </div>
+    </div><! --/container -->
+</div><! --/C -->

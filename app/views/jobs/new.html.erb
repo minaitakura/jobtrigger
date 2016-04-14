@@ -1,0 +1,23 @@
+<div class="search">
+  <%= form_tag new_job_path , method: :get do %>
+    <%= text_field_tag :q , params[:q], placeholder: "キーワードを入力", required: true %>
+    <%= submit_tag "求人を検索", name: nil , class: "btn btn-success", data: { disable_with: "検索中..."} %>
+  <% end %>
+</div>
+<div class="search-result">
+  <% if @jobs.present? %>
+    <div class="alert alert-info">
+      <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+      気になった仕事があれば「気になる」しましょう
+    </div>
+    <%= render 'view_jobs' , jobs: @jobs %>
+  <% elsif params[:q].present? %>
+    
+    <%= @title %>
+    <div class="alert alert-danger">
+      <span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span
+
+      検索したキーワードに関連した求人はありません
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,2 @@
+class Hope < Careership
+end
